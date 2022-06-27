@@ -1,0 +1,15 @@
+N, K = map(int, input().split())
+j=0
+A=[]
+count=0
+
+for i in range(N):
+    A.insert(i,int(input()))
+
+A.sort(reverse=True)
+
+for coin in A:
+    count+=K//coin
+    K%=coin
+
+print(count)
